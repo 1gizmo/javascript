@@ -68,13 +68,15 @@ while (true) {
     while(true){
 
         // 사용자에게 문제를 내고 정답을 입력받기
-        var userAnswer = +prompt(`Q${questionNumber++}. ${firstNumber} ${mark} ${secondNumber} = ??`);
+        var userAnswer = prompt(`Q${questionNumber++}. ${firstNumber} ${mark} ${secondNumber} = ??`);
         
         //아무것도 입력안하면 다시 입력
         if(userAnswer === ''){
             continue;
+        } else {
+            userAnswer = +userAnswer;
+            break;
         }
-        break;
     }   
         
     // 게임 종료 조건
