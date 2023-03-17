@@ -43,6 +43,56 @@ console.log(`============================`);
 
 
 var nums = [10, 20 , 30, 40, 50];
-nums.reverse();
+var copyNums =nums.slice();
+
+copyNums.reverse();
 
 console.log(nums);
+
+// concat() : 배열 2개를 연결
+console.log ( `==========================`);
+
+var arr1 = [10, 20, 30];
+var arr2 = [100, 900, 700, 1000];
+
+var concatedArr = arr1.concat(arr2);
+
+console.log(concatedArr);
+
+// includes() : 배열의 특정 데이터가 존재하는지 확인
+
+console.log(`===================`);
+
+var resultFlag = foodList.includes('닭꼬ck');
+
+console.log(resultFlag);
+
+// splice() : 배열의 특정요소를 제거 , 삽입 
+console.log('================================');
+
+
+console.log(foodList);
+
+
+// 원본에 반영
+foodList.splice(4, 1);
+console.log(foodList);
+
+foodList.splice(0, 1, '보쌈');
+console.log(foodList);
+
+
+//1번에 마라탕 삽입
+foodList.splice(1, 0, '마라탕');
+console.log(foodList);
+
+
+
+foodList.splice(2, 0, '아이스크림', '떡볶이');
+console.log(foodList);
+
+// 2번부터 끝까지 다 지운다
+foodList.splice(2);
+console.log(foodList);
+
+
