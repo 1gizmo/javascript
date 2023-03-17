@@ -5,9 +5,9 @@ var tvxq = ['유노윤호', '최강창민', '영웅재중', '믹키유천', '시
 
 while(true){
 
-    var modTarget = prompt(`현재 멤버:[${arrs}]\n수정할 이름을 입력하세요.`)
+    var modTarget = prompt(`현재 멤버:[${tvxq}]수정할 이름을 입력하세요.`);
     
-    if(arrs.includes(modTarget)){
+    if(tvxq.includes(modTarget)){
         //존재한다면 
         var newMemberName = prompt('새로운 멤버 이름을 입력하세요');
         
@@ -19,5 +19,5 @@ while(true){
 }  else {
     alert(`${modTarget}는 잘못된 이름입니다.\n 멤버이름을 다시 입력해주세요`)
 }
-  
+
 }
