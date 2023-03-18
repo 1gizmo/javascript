@@ -1,13 +1,14 @@
 
 
 
-var input = +prompt(`숫자를 입력하세요`)
+var input = +prompt(`숫자를 입력하세요`);
+var pm = ``;
 
-if(input%2 === 0 ){
-     for(var i = 1; i<=input; i++){
-            alert(`+`)
-        for(var a=1; a<=input; a++){
-            alert(`-`)
+for(var i = 0; i<input; i++){
+             if(i%2 === 0 ){
+                pm += `+`;
+        }else{
+                pm += `-`;
         }
-    } 
 }
+alert(`${pm}`);
