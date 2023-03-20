@@ -14,7 +14,10 @@ function calcNumbersTotalAndAverage(...result){
         
     result.push(total, avg);
 
-    return result
+    return {
+        total,
+        avg
+    }
 
     
    
