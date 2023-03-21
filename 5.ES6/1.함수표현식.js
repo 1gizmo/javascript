@@ -38,4 +38,23 @@ const fArr = [10, 'hello',
              [], add,
             function(){ console.log('메롱')}
             ];
+        fArr[7];
 
+    const dog = {
+        name : '초코',
+        kind : '푸들',
+        bark : function(){
+            console.log('왈왈!');
+        }
+     };
+
+     const cat = {
+        name : '야옹이',
+        kind : '페르시안',
+        sleep : function(){
+            console.log('쿨쿨 zzz');
+        }
+     }
+
+     dog.bark();
+     cat.sleep();
