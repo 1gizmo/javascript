@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+
+    <div class="box" id="item" title="안녕하세"></div>
+
+    <script>
+        const $box = document.querySelector('.box');
+
+        const hello = $box.getAttribute('title');
+        console.log(hello);
+
+
+        // 속성값 변경
+        $box.setAttribute('id','wetermelon');
+        $box.setAttribute('title','배고파여')
+
+        // 속성값 추가
+        $box.setAttribute('value','느아아앙');
+        $box.setAttribute('style','border : 1px solid red');
+
+        //속성값 제거 
+        $box.removeAttribute('id');
+
+        //속성값 확인
+        console.log($box.hasAttribute('title'));
+
+    </script>
+
+
+
+</body>
+</html>
