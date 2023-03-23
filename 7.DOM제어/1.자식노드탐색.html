@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="fruits">
+        <li class="fr apple">사과</li>
+        <li class="fr banana">바나나</li>
+        <li class="fr grape">포도</li>
+    </ul>
+
+    <div class="box">
+        <p></p>
+    </div>
+    
+    <script>
+        // ul 요소 노드를 취득
+        const $fruits = document.getElementById('fruits');
+
+        const $children = [...$fruits.children];
+        
+        console.log($children);
+
+        // const $firuit = $children[0];
+        // const $last = $children[$children.length -1];
+
+        const $first = $fruits.firstElementChild;
+        const $last = $fruits.lastElementChild;
+
+        $first.style.fontSize = '2em';
+        $last.style.transform = 'rotate(180deg)';
+        $last.style.width = 'fit-content';
+
+
+        const $box = document.querySelector('.box');
+
+        // 자식 요소의 유무 확인  !! 두개
+        console.log(!!$box.children.length);
+
+        console.log(hasChildren($box));
+
+
+
+        function hasChildren($target) {
+            return !!$target.children.length;
+        }
+
+        
+    </script>
+</body>
+</html>
