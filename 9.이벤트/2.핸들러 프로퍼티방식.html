@@ -32,9 +32,24 @@
             alert('안녕하세요 ~ ');
         }
         
-        const [$b1, $b2, $b3] = [...document.querySelectorAll('buuton')];
+        const [$b1, $b2, $b3] = [...document.querySelectorAll('button')];
 
-        $b1.onclick = 10;
+        $b1.onclick = sayHello;
+
+        $b2.onclick = function(){
+            $b2.style.width = '150px';
+        };
+
+        $b3.onmouseover = () => {
+            $b3.style.background = 'red';
+        };
+        $b3.onmouseout = () => {
+            $b3.style.background = 'yellow';
+        }
+
+
+        // 핸들러 제거 
+        $b3.onmouseover = null;
         
 
     </script>

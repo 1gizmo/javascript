@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown{
+            background: rgb(155, 8, 8);
+            width: 60px;
+            height: 30px;
+        }
+        .btn{
+            background: rgb(155, 8, 8);
+            color: antiquewhite;
+            text-align: center;
+            width: 60px;
+            height: 30px;
+        }
+        #drop-content a {
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="dropdown">
+        <button class="btn">Drop</button>
+        <div style="display: none;" id="drop-content">
+            <a href="#">Menu1</a>
+            <a href="#">Menu2</a>
+            <a href="#">Menu3</a>
+            <a href="#">Menu4</a>
+            <a href="#">Menu5</a>
+        </div>
+    </div>
+
+    <script>
+        const [$btnclick] = [...document.querySelectorAll('button')];
+        const [$ablock] = [...document.querySelectorAll('#drop-content')];
+
+        $btnclick.onclick = function(){
+            $ablock.style.display = 'block';
+            $ablock.style.background = 'lightgray';
+        }
+        $btnclick.onmouseenter        
+
+        // $btnclick. = function(){
+        //     $ablock.style.display = 'none';
+        //     $ablock.style.background = null;
+        // }
+        
+        console.log($ablock);
+        console.log($btnclick);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button id="hider">텍스트 숨기기!!</button>
+
+    <div class="text">안녕하세요~~</div>
+        <!-- //버튼을 클릭하면 div태그가 숨겨지도록 
+        //이벤트 핸들러를 구현하세요.
+        //힌트 css의 display: none; 사용 -->
+
+    <script>
+        const [$hide] = [...document.querySelectorAll('button')];
+        const [$text] = [...document.querySelectorAll('.text')];
+        
+
+
+
+        $hide.onclick = function(){
+            $text.style.display ='block';      
+        }
+        
+        // $hide.onclick = function(){
+        //     // $text.style.display ='none';      
+        // }
+        
+        
+    
+        
+        
+        
+
+    </script>
+
+
+</body>
+</html>
