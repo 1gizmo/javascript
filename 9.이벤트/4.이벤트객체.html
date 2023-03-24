@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <p>아무곳이나 클릭하세요~</p>
+        <em class="msg"></em>
+
+        <hr><hr><hr>
+
+        <input type="text" id="text">
+        <p class="show"> </p>
+    <script>
+
+        document.body.onclick = function({x, y}) {
+            //   console.log(`x: ${e.x}. y: ${e.y}`);
+            // const {x , y} = e ; 뿌시기
+
+             const $em =  document.querySelector('.msg');
+            $em.textContent = `x: ${x}. y: ${y}`;
+        };
+
+        const $textInput = document.getElementById('text');
+        // console.log($textInput);
+        const $show = document.querySelector('.show')
+        $textInput.addEventListener('keyup', e => {
+            // console.log(e)
+            if(e.key === 'Enter'){
+                $show.textContent = $textInput.value;
+                $textInput.value = '';
+            }
+        });
+    
+    </script>
+
+
+</body>
+</html>
