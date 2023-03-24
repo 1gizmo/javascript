@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fruits{
+            padding: 50px;
+            border: 2px solid red;
+        }
+        #fruits li{
+            background: yellow;
+            margin-bottom: 10px;
+        }
+        #fruits li:first-child {
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+        }
+    </style> 
+</head>
+<body>
+    
+
+        <ul id="fruits">
+            <li class="apple">Apple</li>
+            <li class="banana">Banana</li>
+            <li class="grape">Grape</li>
+        </ul>
+
+
+        <script>
+            const $fruits = document.getElementById('fruits');
+
+            const $apple = document.querySelector('.apple');
+
+            $fruits.addEventListener('click', e => {
+                console.log('ul에서 클릭 이벤트 발생!')
+                console.log(e.target.tagName, '-눌렀음!');
+            });
+
+            $apple.onclick = e => {
+                console.log('apple의 클릭 이벤트 발생!')
+            };
+        </script>
+</body>
+</html>
