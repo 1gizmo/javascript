@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul id="fruits">
+        <li class="fr">사과</li>
+        <li class="fr banana">바나나</li>
+        <li class="fr grape">포도</li>
+        <li class="fr">복숭아</li>
+    </ul>
+
+
+        <script>
+                      //CSS 선택자이니까 CSS 문법처럼 앞에 클래스를 표현한 . 을 붙여줘야한다
+            // const $grape = document.querySelector('#fruits li:nth-child(3)');
+            // const $grape = document.querySelector('.banana + li');
+            const $grape = document.querySelector('#fruits > li');
+            // document.querySelector('.grape');
+            // 동일한 클래스 이름이 여러개라면 첫번째만 바뀌게 된다
+            // const $grape = document.querySelector('.fr');
+                $grape.textContent = '맛있는 포도 '
+
+            //선택자에 해당하는 모든 요소를 취득
+          const elements = [...document.querySelectorAll('.fr')];
+          console.log(elements);
+
+          elements.push($grape);
+
+          // elements[0].style.background = 'red';
+
+          for (const $li of elements){
+            $li.style.border = '1px dashed skyblue';
+          }
+
+          // elements.age = 10;
+          // console.log(elements)
+        
+          const [a,b,c,d] = [...document.querySelectorAll('li')];
+                
+          d.textContent = '어피치'
+
+          elements.forEach($li => {
+            $li.style.color = 'blue';
+          });
+        
+        </script>
+</body>
+</html>

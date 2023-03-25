@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="email" id="account" value="abc@gamil.com">
+
+    <script>
+        const typeAttr = {
+            name : 'type',
+            value : 'email'
+        };
+        
+        const idAttr = {
+            name : 'id',
+            value : 'account'
+        };
+        const valueAttr = {
+            name : 'value',
+            value : 'abc@gamil.com'
+        };
+        
+        // 유사배열
+        const NameNodeMap = {
+            0: typeAttr,
+            1: idAttr,
+            2: valueAttr,
+            length: 3,
+            type: typeAttr,
+            id: idAttr,
+            value: valueAttr
+        };
+
+
+        const $input = document.querySelector('input');
+
+        console.log($input.attributes.id.value);
+
+        $input.attributes.id.value = 'acc';
+
+        $input.attributes.title = new Attr
+        
+
+    </script>
+
+
+</body>
+</html>

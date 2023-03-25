@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li id="apple">사과</li>
+        <li id="banana">바나나</li>
+        <li id="grape">포도</li>
+        <li id="peach">복숭아</li>
+    </ul>
+
+
+
+    <script>
+        // console.log(document.body.firstElementChild)
+
+      const banana = document.getElementById('banana');
+      console.log(banana.attributes.id.value);
+    
+        // id가 grape인 요소노드를 취득하여 배경색상을
+        // violet으로 가로길이를 fit-content 변경
+
+      banana.attributes.id.value = '수고요~';
+
+      const $grape = document.getElementById('grape');
+      $grape.style.backgroundColor ='violet';
+      $grape.style.width ='fit-content';
+
+    </script>
+
+</body>
+</html>
