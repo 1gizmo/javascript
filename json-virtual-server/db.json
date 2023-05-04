@@ -1,0 +1,31 @@
+{
+  "replies": [],
+  "users": [
+    {
+      "id": 1,
+      "account": "abc1234",
+      "userName": "주차킹",
+      "address": "캘리포니아"
+    },
+    {
+      "id": 2,
+      "account": "def9999",
+      "userName": "파킹",
+      "address": "주차나라"
+    },
+    {
+      "account": "fsad1114",
+      "userName": "노진구",
+      "address": "도라에멍",
+      "id": 3
+    },
+    {
+      "account": "qweqwe1",
+      "userName": "요리왕",
+      "address": "쿠킹",
+      "id": 4
+    }
+  ],
+  "files": [],
+  "animals": []
+}

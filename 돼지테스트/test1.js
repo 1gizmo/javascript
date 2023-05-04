@@ -1,14 +1,14 @@
 var turn = 0;
-var audio = new Audio("../sounds/Countdown.mp3");
-audio.volume = 0.2;
-var corsound = new Audio("../sounds/yes.mp3");
-var wrosound = new Audio("../sounds/no.mp3");
-var tiktok = new Audio("../sounds/tiktok2.mp3");
-var tang = new Audio("../sounds/tang.mp3");
-tang.volume = 0.2;
-tiktok.volume = 0.2;
-corsound.volume = 0.2;
-wrosound.volume = 0.2;
+// var audio = new Audio("../sounds/Countdown.mp3");
+// audio.volume = 0.2;
+// var corsound = new Audio("../sounds/yes.mp3");
+// var wrosound = new Audio("../sounds/no.mp3");
+// var tiktok = new Audio("../sounds/tiktok2.mp3");
+// var tang = new Audio("../sounds/tang.mp3");
+// tang.volume = 0.2;
+// tiktok.volume = 0.2;
+// corsound.volume = 0.2;
+// wrosound.volume = 0.2;
 
 let idolMale = topic.idolMale;
 let idol = topic.idol;
@@ -22,10 +22,10 @@ let level1 = level.level1;
 let level2 = level.level2;
 let level3 = level.level3;
 
-document.getElementById("footer").innerHTML +=
-  "총 " + Object.keys(all).length.toString() + "명의 인물";
-document.getElementById("choice").innerHTML +=
-  "총 " + Object.keys(all).length.toString() + "분)";
+// document.getElementById("footer").innerHTML +=
+//   "총 " + Object.keys(all).length.toString() + "명의 인물";
+// document.getElementById("choice").innerHTML +=
+//   "총 " + Object.keys(all).length.toString() + "분)";
 
 //맞는 답을 어떻게 꺼낼 것인가
 //test[문제] <= 정답 Array / 음퀴랑 똑같이 처리 + 문제도 정답으로 처리.
@@ -58,13 +58,7 @@ function Shuffle() {
   }
 }
 
-function makeList() {
-  let a = new Set(list);
-  list = Array.from(a);
-  document.getElementById("total-question").innerHTML = list.length.toString();
-  document.getElementById("choice").textContent =
-    list.length.toString() + "문제";
-}
+
 
 function typeSelect(num, type) {
   if (
@@ -108,89 +102,7 @@ function levelSelect(num) {
   }
 }
 
-document.getElementById("choice").addEventListener("click", function () {
-  document.getElementById("screen").style.visibility = "visible";
-  list = [];
-});
 
-document.getElementById("all").addEventListener("click", function () {
-  list = Object.keys(all);
-  levelSelect(0);
-  makeList();
-});
-document.getElementById("level1").addEventListener("click", function () {
-  list = Object.keys(level1);
-  levelSelect(1);
-  document.getElementById("choice").textContent = "1단계";
-  makeList();
-});
-document.getElementById("level2").addEventListener("click", function () {
-  list = Object.keys(level2);
-  levelSelect(2);
-  document.getElementById("choice").textContent = "2단계";
-  makeList();
-});
-document.getElementById("level3").addEventListener("click", function () {
-  list = Object.keys(level3);
-  levelSelect(3);
-  document.getElementById("choice").textContent = "3단계";
-  makeList();
-});
-
-document.getElementById("newface").addEventListener("click", function () {
-  list = newface;
-  levelSelect(4);
-  document.getElementById("choice").textContent = "뉴페이스";
-  makeList();
-});
-
-document.getElementById("go").addEventListener("click", function () {
-  document.querySelector("#screen").style.visibility = "hidden";
-  makeList();
-});
-
-/// new Set(list)   >>>  Array.from(list)
-document.getElementById("idolMale").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "남자 아이돌";
-  typeSelect(0, idolMale);
-  makeList();
-});
-
-document.getElementById("idol").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "여자 아이돌";
-  typeSelect(1, idol);
-  makeList();
-});
-document.getElementById("singer").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "가수(아이돌 제외)";
-  typeSelect(2, singer);
-  makeList();
-});
-document.getElementById("actor").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "배우";
-  typeSelect(3, actor);
-  makeList();
-});
-document.getElementById("comedian").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "예능인";
-  typeSelect(4, comedian);
-  makeList();
-});
-document.getElementById("influencer").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "인플루언서/캐릭터";
-  typeSelect(5, influencer);
-  makeList();
-});
-document.getElementById("sport").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "스포츠";
-  typeSelect(6, sport);
-  makeList();
-});
-document.getElementById("hero").addEventListener("click", function () {
-  document.getElementById("choice").textContent = "위인";
-  typeSelect(7, hero);
-  makeList();
-});
 
 var timer;
 
@@ -267,13 +179,14 @@ function Ask() {
   document.getElementById("loading").innerHTML +=
     '<img src="./photo/' + list[order + 10] + '.jpg">'; //미리 로딩시키기
   document.getElementById("answer").value = null; // 정답칸 비워주기.
-  if (window.innerWidth < 800) {
-    document.getElementById("title").style.display = "none";
-    document.getElementById("top").style.display = "none";
-    document.querySelector("#title h1").innerHTML = null;
-  } else {
-    document.getElementById("name").style.height = "auto";
-  }
+
+  // if (window.innerWidth < 800) {
+  //   document.getElementById("title").style.display = "none";
+  //   document.getElementById("top").style.display = "none";
+  //   document.querySelector("#title h1").innerHTML = null;
+  // } else {
+  //   document.getElementById("name").style.height = "auto";
+  // }
   // document.getElementById('name').style.height = 'auto'
 }
 
@@ -291,18 +204,18 @@ function levelUp() {
   }
 }
 
-function check(element) {
-  if (
-    document.getElementById("answer").value.replace(/ /g, "").toUpperCase() ===
-      element.replace(/ /g, "").toUpperCase() ||
-    document.getElementById("answer").value.replace(/ /g, "").toLowerCase() ===
-      element.replace(/ /g, "").toLowerCase()
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function check(element) {         ======== 대소문자 구분/ 확인
+//   if (
+//     document.getElementById("answer").value.replace(/ /g, "").toUpperCase() ===
+//       element.replace(/ /g, "").toUpperCase() ||
+//     document.getElementById("answer").value.replace(/ /g, "").toLowerCase() ===
+//       element.replace(/ /g, "").toLowerCase()
+//   ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
 function Game() {
   tiktok.pause();
@@ -313,6 +226,7 @@ function Game() {
     correctAnsw.some(check)
   ) {
     corsound.play();
+
     document.getElementById("result").innerHTML = "정답!";
     document.getElementById("result").style.animation = "blink 1s 0.3";
     setTimeout(function () {
@@ -335,18 +249,18 @@ function Game() {
         "blink 1s step-end infinite";
       document.getElementById("restart").style.display = "block";
 
-      if (list === level1 || list === level2) {
-        document.getElementById("next").style.display = "block";
-      } else if (list === level3 || list === all) {
-        document.getElementById("result").innerHTML +=
-          "<br>이정도면 예능정복 쌉가능";
-      }
+      // if (list === level1 || list === level2) {
+      //   document.getElementById("next").style.display = "block";
+      // } else if (list === level3 || list === all) {
+      //   document.getElementById("result").innerHTML +=
+      //     "<br>이정도면 예능정복 쌉가능";
+      // }
 
-      document.getElementById("answer").style.visibility = "hidden";
-      document.getElementById("button").style.display = "none";
-      document.getElementById("introduction").style.display = "none";
-      document.getElementById("input").style.display = "none";
-      document.getElementById("restart").style.display = "block";
+      // document.getElementById("answer").style.visibility = "hidden";
+      // document.getElementById("button").style.display = "none";
+      // document.getElementById("introduction").style.display = "none";
+      // document.getElementById("input").style.display = "none";
+      // document.getElementById("restart").style.display = "block";
     } else {
       Ask();
     }

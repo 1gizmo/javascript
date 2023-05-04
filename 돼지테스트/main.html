@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인물퀴즈</title>
+   
+   
+    <link rel="stylesheet" href="main.css">
+    <script src="test2.js" defer></script>
+   
+    
+    
+  </head>
+  <body>
+    <div id="screen">
+     
+ 
+      <div id="wrap">
+        <div id="title">
+          <h1>인물 퀴즈</h1>
+          <div id="limit">
+            제한시간은
+            <select name="select" id="time-limit">
+              <option value="3">3초 (알파고)</option>
+              <option value="4">4초 (영석이 형)</option>
+              <option value="5">5초 (쿼티 배려)</option>
+              <option value="6">6초 (천지인 용)</option>
+              <option value="7">7초 (독수리)</option>
+            </select>
+            입니다.
+          </div><br>
+          <button id="choice">범위 선택 (전체:</button>
+          
+          <div id="mode"><p id="together">혼자서</p></div>
+        </div>
+        <div id="name"><img id="img" src="./기본.png" /></div>
+
+        <div id="container2">
+          <div id="input">
+            <input
+              type="text"
+              id="answer"
+              placeholder="입력하세요"
+              onkeyup="Enter()"
+              autocomplete="off"
+            />
+            <br />
+            <button id="submit">Enter</button>
+          </div>
+          <div id="introduction"></div>
+          
+          
+          <div id="result"></div>
+          <div id="explain"></div>
+          <div id="record">점수: 0</div>
+         
+          <div id="button">
+            <button id="start" type="button" onclick="gamestart()">시작</button>
+            <button id="resume">다음<br />문제</button>
+          </div>
+          <div id="a">
+            <button id="restart">다시!</button>
+            <button id="next">다음 <br />단계</button>
+          </div>
+        </div>
+ 
+    </div>
+      <section id="guanggo">
+        <div id="web">
+          <div>
+            <ins
+              class="adsbygoogle"
+              style="display: inline-block; width: 720px; height: 90px"
+              data-ad-client="ca-pub-4961528185865014"
+              data-ad-slot="3518599684"
+            ></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+          
+        <div id="mobile">
+          
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:300px;height:100px"
+               data-ad-client="ca-pub-4961528185865014"
+               data-ad-slot="2645973898"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script> </div>
+      </section>
+      <div id="side" class="web">
+       
+        <ins
+          class="adsbygoogle"
+          style="display: inline-block; width: 150px; height: 700px"
+          data-ad-client="ca-pub-4961528185865014"
+          data-ad-slot="9187046100"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <div id="no2">
+        <ins class="adsbygoogle"
+ style="display:inline-block;width:150px;height:700px"
+ data-ad-client="ca-pub-4961528185865014"
+ data-ad-slot="5172629531"></ins>
+<script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+      <div id="footer">
+        모든 사진의 저작권은 각각의 저작권자에게 있으며, 게시 용도로만 사용되고
+        있습니다.
+      </div>
+      <div id="loading"></div>
+    </div>
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c246e594372e42d2980e18a2f2f4b39f"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>
